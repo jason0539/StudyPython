@@ -8,8 +8,9 @@ try:
             print(role,end='')
             print(' said: ',end='')
             print(role_spoken,end='')        
-        except:
+        except ValueError:
+            print('aha,there is an exception')
             pass    
     data.close()
-except:
+except IOError:
     print('The data file is missing!')
