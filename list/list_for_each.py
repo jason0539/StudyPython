@@ -1,5 +1,4 @@
-movies = ["one","two",["one","two",["one","two","three"]]]
-
+movies = ["one",["one","two"],["one","two","three"]]
 print(movies)
 
 for each_item in movies:
