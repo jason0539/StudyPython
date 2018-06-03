@@ -51,6 +51,11 @@ uniqe_julie = sorted(set([sanitize(each_time) for each_time in julie]))
 uniqe_mikey = sorted(set([sanitize(each_time) for each_time in mikey]))
 uniqe_sarah = sorted(set([sanitize(each_time) for each_time in sarah]))
 
+'''循环去重demo'''
+# for each_time in sorted_james:
+#     if each_time not in uniqe_james:
+#         uniqe_james.append(each_time)
+
 print(uniqe_james[0:3])
 print(uniqe_julie[0:3])
 print(uniqe_mikey[0:3])
