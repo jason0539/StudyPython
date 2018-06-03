@@ -39,7 +39,13 @@ sarah = data.strip().split(',')
 # for each_time in sarah:
 #     clean_sarah.append(sanitize(each_time))
 
-'''列表推导转换'''
+'''列表推导转换
+mins = [1,2,3]
+secs = [m * 60 for m in mins]
+
+meters = [1,10,3]
+feet = [m * 3.281 for m in meters]
+'''
 clean_james = [sanitize(each_time) for each_time in james]
 clean_julie = [sanitize(each_time) for each_time in julie]
 clean_mikey = [sanitize(each_time) for each_time in mikey]
