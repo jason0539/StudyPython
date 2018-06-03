@@ -1,3 +1,4 @@
+'''统一时间item中的特殊字符'''
 def sanitize(time_string):
     if '-' in time_string:
         splitter = '-'
@@ -8,21 +9,20 @@ def sanitize(time_string):
     (mins,secs) = time_string.split(splitter)
     return mins + '.' + secs
 
-with open('james.txt') as jaf:
-    data = jaf.readline()
-james = data.strip().split(',')
+'''从文件读取时间item'''
+def get_coach_data(file_name):
+    try:
+        with open(file_name) as f:
+            data = f.readline()
+        return data.strip().split(',')
+    except IOError as err:
+        print('File error ' + str(err))
+        return None
 
-with open('julie.txt') as juf:
-    data = juf.readline()
-julie = data.strip().split(',')
-
-with open('mikey.txt') as mif:
-    data = mif.readline()
-mikey = data.strip().split(',')
-
-with open('sarah.txt') as saf:
-    data = saf.readline()
-sarah = data.strip().split(',')
+james = get_coach_data('james.txt')
+julie = get_coach_data('julie.txt')
+mikey = get_coach_data('mikey.txt')
+sarah = get_coach_data('sarah.txt')
 
 '''逐个转换'''
 # clean_james = []
