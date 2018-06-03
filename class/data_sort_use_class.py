@@ -14,8 +14,15 @@ class Athlete:
         self.name = name
         self.birthday = birthday
         self.grade = grade
+    
     def top3(self):
         return (sorted(set([sanitize(each_time) for each_time in self.grade]))[0:3])
+
+    def add_time(self,time_value):
+        self.grade.append(time_value)
+    
+    def add_times(self,list_of_times):
+        self.grade.extend(list_of_times)
 
 '''从文件读取时间item'''
 def get_coach_data(file_name):
