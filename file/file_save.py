@@ -1,4 +1,5 @@
 import os
+import nester
 
 man = []
 other = []
@@ -34,9 +35,9 @@ except IOError:
 ''' 使用with处理文件打开与写入'''
 try:
     with open('man_data.txt','w') as man_file:
-        print(man,file = man_file)
+        nester.print_lol(man,False,0,man_file)
     with open('other_data.txt','w') as other_file:
-        print(other,file = other_file)
+        nester.print_lol(other,False,0,other_file)
 except IOError as err:
     print('File error:' + str(err))
 
