@@ -22,7 +22,14 @@ def get_coach_data(file_name):
 sarah = get_coach_data('sarah.txt')
 
 # 继续使用列表存储数据结构
-(name,birthday) = sarah.pop(0),sarah.pop(0)
-grade = sorted(set([sanitize(each_time) for each_time in sarah]))[0:3]
-print(name + "'s best grade is :" + str(grade))
+# (name,birthday) = sarah.pop(0),sarah.pop(0)
+# grade = sorted(set([sanitize(each_time) for each_time in sarah]))[0:3]
+# print(name + "'s best grade is :" + str(grade))
 
+# 使用字典存储
+sarah_data = {}
+sarah_data['Name'] = sarah.pop(0)
+sarah_data['Birthday'] = sarah.pop(0)
+sarah_data['Grade'] = sorted(set([sanitize(each_time) for each_time in sarah]))
+
+print(sarah_data['Name'] + "'s best grade is :" + str(sarah_data['Grade'][0:3]))
