@@ -72,8 +72,8 @@ for each_time in sorted_sarah:
     if each_time not in uniqe_sarah:
         uniqe_sarah.append(each_time)
 
-print(uniqe_james)
-print(uniqe_julie)
-print(uniqe_mikey)
-print(uniqe_sarah)
+print(uniqe_james[0:3])
+print(uniqe_julie[0:3])
+print(uniqe_mikey[0:3])
+print(uniqe_sarah[0:3])
 
