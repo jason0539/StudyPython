@@ -29,8 +29,10 @@ except IOError:
 # except IOError:
 #     print('File error.')
 # finally:
-#     man_file.close()
-#     other_file.close()
+#     if man_file in locals():
+#         man_file.close()
+#     if other_file in locals():
+#         other_file.close()
 
 ''' 使用with处理文件打开与写入'''
 try:
