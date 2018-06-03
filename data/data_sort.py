@@ -46,31 +46,10 @@ secs = [m * 60 for m in mins]
 meters = [1,10,3]
 feet = [m * 3.281 for m in meters]
 '''
-sorted_james = sorted([sanitize(each_time) for each_time in james])
-sorted_julie = sorted([sanitize(each_time) for each_time in julie])
-sorted_mikey = sorted([sanitize(each_time) for each_time in mikey])
-sorted_sarah = sorted([sanitize(each_time) for each_time in sarah])
-
-uniqe_james = []
-uniqe_julie = []
-uniqe_mikey = []
-uniqe_sarah = []
-
-for each_time in sorted_james:
-    if each_time not in uniqe_james:
-        uniqe_james.append(each_time)
-
-for each_time in sorted_julie:
-    if each_time not in uniqe_julie:
-        uniqe_julie.append(each_time)
-
-for each_time in sorted_mikey:
-    if each_time not in uniqe_mikey:
-        uniqe_mikey.append(each_time)
-
-for each_time in sorted_sarah:
-    if each_time not in uniqe_sarah:
-        uniqe_sarah.append(each_time)
+uniqe_james = sorted(set([sanitize(each_time) for each_time in james]))
+uniqe_julie = sorted(set([sanitize(each_time) for each_time in julie]))
+uniqe_mikey = sorted(set([sanitize(each_time) for each_time in mikey]))
+uniqe_sarah = sorted(set([sanitize(each_time) for each_time in sarah]))
 
 print(uniqe_james[0:3])
 print(uniqe_julie[0:3])
