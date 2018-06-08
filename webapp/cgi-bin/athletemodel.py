@@ -1,10 +1,11 @@
 
 import pickle
 import sqlite3
+import os
 
 from athletelist import AthleteList
 
-db_name = 'coachdata.sqlite'
+db_name = 'cgi-bin/coachdata.sqlite'
 
 def get_names_from_store():
     connection = sqlite3.connect(db_name)
