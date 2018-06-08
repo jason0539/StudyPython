@@ -5,7 +5,7 @@ cursor = connection.cursor()
 
 import glob
 import athletemodel
-data_files = glob.glob("../webapp/data/*.txt")
+data_files = glob.glob("../data/*.txt")
 athletes = athletemodel.put_to_store(data_files)
 
 for each_ath in athletes:
