@@ -18,7 +18,7 @@ form = cgi.FieldStorage()
 for each_form_item in form.keys():
     print(each_form_item + '->' + form[each_form_item].value,end='',file=sys.stderr)
 print(file=sys.stderr)
-the_id = form['Athlete'].value
+the_id = form.getvalue('AthleteId')
 the_time = form['Time'].value
 
 connection = sqlite3.connect('cgi-bin/coachdata.sqlite')
