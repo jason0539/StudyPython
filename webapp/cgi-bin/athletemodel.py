@@ -33,8 +33,8 @@ def get_athlete_from_id(athlete_id):
     response = {
         'Name':name,
         'Dob':dob,
-        'data':data,
-        'top3':data[0:3]
+        'data':sorted(data),
+        'top3':sorted(data)[0:3]
     }
     connection.close()
     return(response)
